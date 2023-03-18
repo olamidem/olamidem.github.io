@@ -2568,7 +2568,7 @@ button:active,
     width: 275px;
     z-index: 10002;
     width: 275px;
-    background: #222729 url("images/overlay.png");
+    background: #e6dace url("images/overlay.png");
     box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
   }
 
