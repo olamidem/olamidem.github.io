@@ -177,7 +177,7 @@ body {
   font-family: bookman Old Style;
   font-size: 19pt;
   font-weight: 300;
-  line-height: 1.75em;
+  line-height: 1.5em;
   color: #0a0909;
 }
 
@@ -2797,4 +2797,10 @@ button:active,
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+hr {
+  color: black;
+  font-size: 18px;
+  text-decoration: underline;
 }
