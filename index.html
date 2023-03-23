@@ -1,3 +1,32 @@
+<?php
+
+if(isset($_POST['submit'])) {
+
+    $to = "olagunjumujeebolamide@gmail.com"; // Replace with your own email address
+    $subject = "New message from contact form";
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $headers = "From: $email";
+
+    // Check if name, email and message fields are filled out
+    if(!empty($name) && !empty($email) && !empty($message)) {
+        
+        // Send email
+        if(mail($to, $subject, $message, $headers)) {
+            echo "Thank you for contacting us, $name. We will get back to you shortly.";
+        } else {
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+
+    } else {
+        echo "Please fill out all fields.";
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -291,19 +320,19 @@
             —I'm always interested in discussing data and analytics or connecting with other professionals in the field.
           </p>
 
-          <form method="post" action="mailto:olagunjumujeebolamide@gmail.com">
+          <form method="post" >
             <div class="row">
               <div class="col-6 col-12-mobile">
-                <input type="text" name="name" placeholder="Name" />
+                <input type="text" name="name" placeholder="Name" required/>
               </div>
               <div class="col-6 col-12-mobile">
-                <input type="text" name="email" placeholder="Email" />
+                <input type="email" name="email" placeholder="Email" required />
               </div>
               <div class="col-12">
-                <textarea name="message" placeholder="Message"></textarea>
+                <textarea name="message" placeholder="Message" required></textarea>
               </div>
               <div class="col-12">
-                <input type="submit" value="Send Message" />
+                <input type="submit"  name="submit" value="Send Message" />
               </div>
             </div>
           </form>
