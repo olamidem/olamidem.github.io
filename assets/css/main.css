@@ -2804,3 +2804,13 @@ hr {
   font-size: 18px;
   text-decoration: underline;
 }
+@media screen and (max-width: 736px) {
+  .modal-content {
+    background-color: #fefefe;
+    width: inherit;
+    margin: 0px;
+  }
+  iframe {
+    width: inherit;
+  }
+}
